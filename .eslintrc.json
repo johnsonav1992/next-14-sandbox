@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
-}
+    "extends": [
+      "@veryable/eslint-config-veryable-frontend",
+      "@veryable/eslint-config-veryable-frontend/next"
+    ],
+    "plugins": [ ],
+    "globals": {
+      "globalThis": false
+      , "JSX":"readonly"
+    },
+    "env": {},
+    "overrides": [
+    ]
+  }
