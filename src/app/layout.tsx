@@ -4,7 +4,7 @@ import './globals.css';
 
 import { cn } from '@/lib/utils';
 
-export const inter = Inter( {
+const inter = Inter( {
     subsets: [ 'latin' ]
     , variable: '--font-sans'
 } );
