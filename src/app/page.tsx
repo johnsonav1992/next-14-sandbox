@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { sql } from '@vercel/postgres';
 
 type Todo = {
     userId: number;
@@ -11,6 +12,10 @@ type Todo = {
 const Home = async () => {
     const res = await fetch( 'https://jsonplaceholder.typicode.com/todos/' );
     const data: Todo[] = await res.json();
+
+    const { todos } = await sql`SELECT * FROM todos`;
+
+    console.log( todos );
 
     return (
         <>
