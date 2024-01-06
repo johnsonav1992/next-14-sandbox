@@ -13,9 +13,9 @@ const Home = async () => {
     const res = await fetch( 'https://jsonplaceholder.typicode.com/todos/' );
     const data: Todo[] = await res.json();
 
-    const { todos } = await sql`SELECT * FROM todos`;
+    const { rows } = await sql`SELECT * FROM todos`;
 
-    console.log( todos );
+    console.log( rows );
 
     return (
         <>
